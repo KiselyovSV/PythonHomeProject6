@@ -18,9 +18,8 @@ def diet(*eats: str) -> None:
         'диетическое': ['овощи', 'фрукты', 'гречка', 'курица']
     }
     for eat in eats:
-        for key in food:
-            for i in food[key]:
-                if i == eat and key == "диетическое":
+         for i in food['диетическое']:
+                if i == eat:
                     healthy_f_count += 1
     if healthy_f_count >= len(eats) / 2:
         print(f"Полезной еды: {healthy_f_count}\n"
